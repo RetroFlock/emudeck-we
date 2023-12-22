@@ -455,8 +455,8 @@ if (-not (Test-Path $installDir)) {
 
 	$installDir="$env:ProgramFiles\Git\"
 
-	Start-Process "$temp\git_install.exe" -Wait -Args "/VERYSILENT /INSTALLDIR=\$installDir"
-	$file = "$env:USERPROFILE" "Downloads"
+	Start-Process "$temp\git_install.exe" -Wait -Args " /INSTALLDIR=\$installDir"
+	$file = "$env:USERPROFILE\roms\$system\media\$type\$romName.png"
 
 
 	if (-not (Test-Path $installDir)) {
